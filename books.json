@@ -1,0 +1,9 @@
+[
+    {
+        "Nombre del Libro": "Ultimate Python",
+        "Autor del Libro": "HolaMundodev",
+        "Categoria del Libro": "Programacion",
+        "Año de Lanzamiento": 2023,
+        "Precio": 20.0
+    }
+]
