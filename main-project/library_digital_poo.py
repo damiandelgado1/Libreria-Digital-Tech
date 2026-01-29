@@ -37,31 +37,20 @@ class BookSaved(NewBook):
         library.append(book_new)
         return library
 
-# Implementacion de Funcionalidades de la Libreria
-class ShopLibrary(ABC):
-    @abstractmethod
-    def search_book(self):
-        pass
-
-    @abstractmethod
-    def show_category(self):
-        pass
-
-    @abstractmethod
-    def payment_book(self):
-        pass
-
-# Se crea relacion entre Clase y Metodos de ShopLibrary
+# SRP implementado para Relacion de Clases y Sub-Clases
+# Clase con enfoque en Busqueda de Libros
 class Searcheable(ABC):
     @abstractmethod
     def search_book(self):
         pass
 
+# Clase con enfoque en Mostrar Categorias
 class Categoryzable(ABC):
     @abstractmethod
     def show_category(self):
         pass
 
+# Clase con enfoque en Compra
 class Purchable(ABC):
     @abstractmethod
     def payment_book(self):
