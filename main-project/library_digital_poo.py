@@ -31,11 +31,13 @@ class NewBook(ABC):
     def saved_book(self):
         pass
 
+# Se Guarda Libro en la Libreria
 class BookSaved(NewBook):
     def saved_book(self, library, book_new):
         library.append(book_new)
         return library
 
+# Implementacion de Funcionalidades de la Libreria
 class ShopLibrary(ABC):
     @abstractmethod
     def search_book(self):
@@ -49,6 +51,7 @@ class ShopLibrary(ABC):
     def payment_book(self):
         pass
 
+# Se crea relacion entre Clase y Metodos de ShopLibrary
 class Searcheable(ABC):
     @abstractmethod
     def search_book(self):
@@ -64,6 +67,7 @@ class Purchable(ABC):
     def payment_book(self):
         pass
 
+# Busqueda de Libro por Nombre
 class SearchedLibrary(Searcheable):
     def search_book(self, library, search_book, search_author):
         book_availability = False
@@ -83,6 +87,7 @@ class SearchedLibrary(Searcheable):
             else:
                 print("Libro No Disponible")
 
+# Mostrar Libros por Categoria, principales: Programacion, IA o Tecnologia
 class CategoryLibrary(Categoryzable):
     def show_category(self, library, search_category):
         category_exists = False
@@ -97,6 +102,7 @@ class CategoryLibrary(Categoryzable):
         else:
             print("No hay Libros en Esta Categoria")
 
+# Compra Libro de la Libreria
 class BuyLibrary(Purchable):
     def payment_book(self, library, name_book):
         books_shop = []
