@@ -1,0 +1,7 @@
+env/bin/sqlformat
+env/lib/python3.12/site-packages/asgiref-3.11.0.dist-info/
+env/lib/python3.12/site-packages/asgiref/
+env/lib/python3.12/site-packages/django-6.0.1.dist-info/
+env/lib/python3.12/site-packages/django/
+env/lib/python3.12/site-packages/sqlparse-0.5.5.dist-info/
+env/lib/python3.12/site-packages/sqlparse/
